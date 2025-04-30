@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpvtfsydi8o8a"]
+
+[ext_resource type="Script" uid="uid://b6ydfcm842p2n" path="res://Core/User Interface/selection_menu.gd" id="1_6rcvn"]
+
+[node name="Selection Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6rcvn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1287.0
+offset_bottom = 734.0
+color = Color(0.517647, 1, 0.862745, 1)
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 2
+offset_left = 767.0
+offset_top = 237.0
+offset_right = 943.0
+offset_bottom = 402.0
+text = "Host Room"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 2
+offset_left = 305.0
+offset_top = 230.0
+offset_right = 473.0
+offset_bottom = 392.0
+text = "Join Room"
+
+[node name="CreateDialog" type="AcceptDialog" parent="."]
+title = "Waiting for players!"
+initial_position = 2
+size = Vector2i(500, 250)
+popup_window = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CreateDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 492.0
+offset_bottom = 201.0
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="CreateDialog/ScrollContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Loading..."
+
+[node name="PlayerList" type="VBoxContainer" parent="CreateDialog/ScrollContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]

@@ -1,0 +1,253 @@
+[gd_scene load_steps=29 format=3 uid="uid://giolbxdg7imw"]
+
+[ext_resource type="Texture2D" uid="uid://b8kiw4x4s6njf" path="res://Assets/Board.png" id="1_ih1i7"]
+[ext_resource type="Script" uid="uid://c880j08fn0kgn" path="res://Core/Game/piece_manager.gd" id="2_metqo"]
+[ext_resource type="PackedScene" uid="uid://b3y3ioiwkmcss" path="res://Core/Game/piece_border_base.tscn" id="2_xc4l4"]
+[ext_resource type="PackedScene" uid="uid://ci064rw2kattt" path="res://Core/Game/Pieces/One.tscn" id="4_xc4l4"]
+[ext_resource type="PackedScene" uid="uid://kmakxqei32s3" path="res://Core/Game/Pieces/Two.tscn" id="5_3lyiu"]
+[ext_resource type="PackedScene" uid="uid://bixhefjthdgg5" path="res://Core/Game/Pieces/Three.tscn" id="6_gasxi"]
+[ext_resource type="PackedScene" uid="uid://bvc7j25sykvcy" path="res://Core/Game/Pieces/Four.tscn" id="7_1ouok"]
+[ext_resource type="PackedScene" uid="uid://b4el10v0fdvcb" path="res://Core/Game/Pieces/Five.tscn" id="8_xt0o3"]
+[ext_resource type="PackedScene" uid="uid://bqjieto6uyobs" path="res://Core/Game/Pieces/Six.tscn" id="9_mxeb8"]
+[ext_resource type="PackedScene" uid="uid://k1wyvc314o" path="res://Core/Game/Pieces/Seven.tscn" id="10_xwwsh"]
+[ext_resource type="PackedScene" uid="uid://c8kouoainucw3" path="res://Core/Game/Pieces/Eight.tscn" id="11_xstsh"]
+[ext_resource type="PackedScene" uid="uid://1acyn0wtact6" path="res://Core/Game/Pieces/Nine.tscn" id="12_udval"]
+[ext_resource type="PackedScene" uid="uid://cotnp2hnkpyec" path="res://Core/Game/Pieces/Ten.tscn" id="13_ndpy5"]
+[ext_resource type="PackedScene" uid="uid://k2qja11ex15e" path="res://Core/Game/Pieces/Eleven.tscn" id="14_ebkpn"]
+[ext_resource type="PackedScene" uid="uid://biy17a7v2d7i2" path="res://Core/Game/Pieces/Twelve.tscn" id="15_r7wlg"]
+[ext_resource type="PackedScene" uid="uid://dytpxexxu3v2m" path="res://Core/Game/Pieces/Thirteen.tscn" id="16_wsae0"]
+[ext_resource type="PackedScene" uid="uid://cg7smwf25miy1" path="res://Core/Game/Pieces/Forteen.tscn" id="17_0kw4l"]
+[ext_resource type="PackedScene" uid="uid://bq0yw38u4dyp2" path="res://Core/Game/Pieces/Fifteen.tscn" id="18_rjvg3"]
+[ext_resource type="PackedScene" uid="uid://iehchts7kxi3" path="res://Core/Game/Pieces/Sixteen.tscn" id="19_yamlm"]
+[ext_resource type="PackedScene" uid="uid://cwn54cmh3ubdi" path="res://Core/Game/Pieces/Seventeen.tscn" id="20_v14yc"]
+[ext_resource type="PackedScene" uid="uid://jrq17pgg5owq" path="res://Core/Game/Pieces/Eighteen.tscn" id="21_xt8k7"]
+[ext_resource type="PackedScene" uid="uid://coprqos42grth" path="res://Core/Game/Pieces/Nineteen.tscn" id="22_kn7ev"]
+[ext_resource type="PackedScene" uid="uid://b63jk7yrvx11b" path="res://Core/Game/Pieces/Twenty.tscn" id="23_4vctw"]
+[ext_resource type="PackedScene" uid="uid://dg2b10baf4tks" path="res://Core/Game/Pieces/Twentyone.tscn" id="24_yamlm"]
+[ext_resource type="PackedScene" uid="uid://njvvqxo7dqqj" path="res://Core/Game/Pieces/Twentytwo.tscn" id="25_v14yc"]
+[ext_resource type="PackedScene" uid="uid://des1bgkw65yvq" path="res://Core/Game/Pieces/Twentythree.tscn" id="26_xt8k7"]
+[ext_resource type="PackedScene" uid="uid://utlslq4e601l" path="res://Core/Game/Pieces/Twentyfour.tscn" id="27_kn7ev"]
+[ext_resource type="PackedScene" uid="uid://c4fjcou85b520" path="res://Core/Game/Pieces/Twentyfive.tscn" id="28_4vctw"]
+
+[node name="Arange Level" type="Node2D"]
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Background" type="ColorRect" parent="UI"]
+offset_right = 1287.0
+offset_bottom = 724.0
+mouse_filter = 2
+color = Color(0.529412, 1, 1, 1)
+
+[node name="Border" type="ColorRect" parent="UI"]
+offset_right = 1285.0
+offset_bottom = 23.0
+color = Color(0, 0, 0, 1)
+
+[node name="Border2" type="ColorRect" parent="UI"]
+offset_top = 697.0
+offset_right = 1285.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Border3" type="ColorRect" parent="UI"]
+offset_top = 699.0
+offset_right = 678.0
+offset_bottom = 722.0
+rotation = -1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="Border4" type="ColorRect" parent="UI"]
+offset_left = 1259.0
+offset_top = 699.0
+offset_right = 1937.0
+offset_bottom = 722.0
+rotation = -1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="Board" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(410.944, 357)
+scale = Vector2(0.88902, 0.905556)
+texture = ExtResource("1_ih1i7")
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Piece Border" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(98, 96)
+
+[node name="Piece Border2" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(212, 96)
+
+[node name="Piece Border3" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(325, 96)
+
+[node name="Piece Border4" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(439, 96)
+
+[node name="Piece Border5" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(553, 96)
+
+[node name="Piece Border6" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(553, 212)
+
+[node name="Piece Border7" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(439, 212)
+
+[node name="Piece Border8" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(326, 212)
+
+[node name="Piece Border9" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(212, 212)
+
+[node name="Piece Border10" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(98, 212)
+
+[node name="Piece Border11" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(98, 328)
+
+[node name="Piece Border12" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(212, 328)
+
+[node name="Piece Border13" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(325, 328)
+
+[node name="Piece Border14" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(440, 328)
+
+[node name="Piece Border15" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(553, 328)
+
+[node name="Piece Border16" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(553, 444)
+
+[node name="Piece Border17" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(440, 444)
+
+[node name="Piece Border18" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(326, 444)
+
+[node name="Piece Border19" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(212, 444)
+
+[node name="Piece Border20" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(98, 444)
+
+[node name="Piece Border21" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(98, 560)
+
+[node name="Piece Border22" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(211, 560)
+
+[node name="Piece Border23" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(326, 560)
+
+[node name="Piece Border24" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(439, 560)
+
+[node name="Piece Border25" parent="Borders" instance=ExtResource("2_xc4l4")]
+z_index = 2
+position = Vector2(553, 560)
+
+[node name="Piece manager" type="Node2D" parent="."]
+z_index = 3
+script = ExtResource("2_metqo")
+
+[node name="Piece" parent="Piece manager" instance=ExtResource("4_xc4l4")]
+position = Vector2(835, 75)
+
+[node name="Piece2" parent="Piece manager" instance=ExtResource("5_3lyiu")]
+position = Vector2(1010, 175)
+
+[node name="Piece3" parent="Piece manager" instance=ExtResource("6_gasxi")]
+position = Vector2(837, 170)
+
+[node name="Piece4" parent="Piece manager" instance=ExtResource("7_1ouok")]
+position = Vector2(929, 78)
+
+[node name="Piece5" parent="Piece manager" instance=ExtResource("8_xt0o3")]
+position = Vector2(1011, 78)
+
+[node name="Piece6" parent="Piece manager" instance=ExtResource("9_mxeb8")]
+position = Vector2(1094, 77)
+
+[node name="Piece7" parent="Piece manager" instance=ExtResource("10_xwwsh")]
+position = Vector2(1189, 163)
+
+[node name="Piece8" parent="Piece manager" instance=ExtResource("11_xstsh")]
+position = Vector2(929, 176)
+
+[node name="Piece9" parent="Piece manager" instance=ExtResource("12_udval")]
+position = Vector2(1100, 168)
+
+[node name="Piece10" parent="Piece manager" instance=ExtResource("13_ndpy5")]
+position = Vector2(1184, 79)
+
+[node name="Piece11" parent="Piece manager" instance=ExtResource("14_ebkpn")]
+position = Vector2(832, 267)
+
+[node name="Piece12" parent="Piece manager" instance=ExtResource("15_r7wlg")]
+position = Vector2(929, 273)
+
+[node name="Piece13" parent="Piece manager" instance=ExtResource("16_wsae0")]
+position = Vector2(1016, 278)
+
+[node name="Piece14" parent="Piece manager" instance=ExtResource("17_0kw4l")]
+position = Vector2(1101, 273)
+
+[node name="Piece15" parent="Piece manager" instance=ExtResource("18_rjvg3")]
+position = Vector2(1188, 276)
+
+[node name="Piece16" parent="Piece manager" instance=ExtResource("19_yamlm")]
+position = Vector2(831, 362)
+
+[node name="Piece17" parent="Piece manager" instance=ExtResource("20_v14yc")]
+position = Vector2(923, 368)
+
+[node name="Piece18" parent="Piece manager" instance=ExtResource("21_xt8k7")]
+position = Vector2(1024, 368)
+
+[node name="Piece19" parent="Piece manager" instance=ExtResource("22_kn7ev")]
+position = Vector2(1116, 369)
+
+[node name="Piece20" parent="Piece manager" instance=ExtResource("23_4vctw")]
+position = Vector2(1189, 373)
+
+[node name="Piece21" parent="Piece manager" instance=ExtResource("24_yamlm")]
+position = Vector2(835, 456)
+
+[node name="Piece22" parent="Piece manager" instance=ExtResource("25_v14yc")]
+position = Vector2(921, 455)
+
+[node name="Piece23" parent="Piece manager" instance=ExtResource("26_xt8k7")]
+position = Vector2(1015, 456)
+
+[node name="Piece24" parent="Piece manager" instance=ExtResource("27_kn7ev")]
+position = Vector2(1107, 459)
+
+[node name="Piece25" parent="Piece manager" instance=ExtResource("28_4vctw")]
+position = Vector2(1193, 460)

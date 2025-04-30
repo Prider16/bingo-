@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci064rw2kattt"]
+
+[ext_resource type="PackedScene" uid="uid://xrcfsjc8e2lv" path="res://Core/Game/piece_base.tscn" id="1_f402r"]
+
+[node name="Piece" instance=ExtResource("1_f402r")]
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = -10.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1

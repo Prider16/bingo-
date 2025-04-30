@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://okphb5uvy8of"]
+
+[ext_resource type="Script" uid="uid://docyxc2cg45hw" path="res://Core/User Interface/main_page.gd" id="1_cbinj"]
+[ext_resource type="Texture2D" uid="uid://dfg81mugym6yf" path="res://Assets/Bingo.png" id="1_kmfdh"]
+
+[node name="Main Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbinj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1287.0
+offset_bottom = 734.0
+color = Color(0.517647, 1, 0.862745, 1)
+
+[node name="Bingo" type="Sprite2D" parent="."]
+position = Vector2(630, 213)
+texture = ExtResource("1_kmfdh")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 418.0
+offset_right = 685.0
+offset_bottom = 459.0
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

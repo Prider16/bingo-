@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3y3ioiwkmcss"]
+
+[ext_resource type="Script" uid="uid://o4e8eta5jb10" path="res://Core/Game/piece_border_base.gd" id="1_bkn87"]
+[ext_resource type="Texture2D" uid="uid://0i0vcq3pbug8" path="res://Assets/piece_Border.png" id="1_gky7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkn87"]
+size = Vector2(68, 70)
+
+[node name="Piece Border" type="Node2D"]
+script = ExtResource("1_bkn87")
+
+[node name="PieceBorder" type="Sprite2D" parent="."]
+scale = Vector2(1.0625, 1.09375)
+texture = ExtResource("1_gky7a")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_bkn87")
