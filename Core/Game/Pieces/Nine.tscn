@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://1acyn0wtact6"]
+[gd_scene load_steps=3 format=3 uid="uid://1acyn0wtact6"]
 
 [ext_resource type="PackedScene" uid="uid://xrcfsjc8e2lv" path="res://Core/Game/piece_base.tscn" id="1_h0jl8"]
+[ext_resource type="Script" uid="uid://yh1v0lwk7psb" path="res://Core/Game/Pieces/Pieces Scripts/nine.gd" id="2_xsee3"]
 
 [node name="Piece" instance=ExtResource("1_h0jl8")]
+script = ExtResource("2_xsee3")
 
 [node name="Label" type="Label" parent="." index="2"]
 anchors_preset = 8

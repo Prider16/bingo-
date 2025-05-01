@@ -1,0 +1,136 @@
+[gd_scene load_steps=28 format=3 uid="uid://bfxy5m77r50m4"]
+
+[ext_resource type="Script" uid="uid://3g7siqnlumdd" path="res://Core/Game/game_screen.gd" id="1_m7u3b"]
+[ext_resource type="PackedScene" uid="uid://jhrcgsqerf0u" path="res://Core/Game/Buttons/button_one.tscn" id="1_op75x"]
+[ext_resource type="Texture2D" uid="uid://b8kiw4x4s6njf" path="res://Assets/Board.png" id="2_0ywrh"]
+[ext_resource type="PackedScene" uid="uid://dgi0its6qj7p5" path="res://Core/Game/Buttons/button_two.tscn" id="3_fof7u"]
+[ext_resource type="PackedScene" uid="uid://fgjx162acvsa" path="res://Core/Game/Buttons/button_three.tscn" id="4_egnkj"]
+[ext_resource type="PackedScene" uid="uid://c25qojj6mui0s" path="res://Core/Game/Buttons/button_four.tscn" id="5_0ywrh"]
+[ext_resource type="PackedScene" uid="uid://dfud5kvdinjo3" path="res://Core/Game/Buttons/button_five.tscn" id="6_ax7wh"]
+[ext_resource type="PackedScene" uid="uid://c5vb2d3hagexd" path="res://Core/Game/Buttons/button_six.tscn" id="7_dhgsu"]
+[ext_resource type="PackedScene" uid="uid://vql4s7b8rcf5" path="res://Core/Game/Buttons/button_seven.tscn" id="8_qh5uf"]
+[ext_resource type="PackedScene" uid="uid://1cd652xqgyvh" path="res://Core/Game/Buttons/button_eight.tscn" id="9_7ctwn"]
+[ext_resource type="PackedScene" uid="uid://cre72qeucucbu" path="res://Core/Game/Buttons/button_nine.tscn" id="10_ecgqp"]
+[ext_resource type="PackedScene" uid="uid://b78mti4r14iok" path="res://Core/Game/Buttons/button_ten.tscn" id="11_pjjb3"]
+[ext_resource type="PackedScene" uid="uid://fblqmm4wuu3s" path="res://Core/Game/Buttons/button_Eleven.tscn" id="12_432h0"]
+[ext_resource type="PackedScene" uid="uid://ctc7281k7dtp5" path="res://Core/Game/Buttons/button_twealve.tscn" id="13_dja32"]
+[ext_resource type="PackedScene" uid="uid://g37h44f3gd3y" path="res://Core/Game/Buttons/button_thirteen.tscn" id="14_4raht"]
+[ext_resource type="PackedScene" uid="uid://5c10uepatenf" path="res://Core/Game/Buttons/button_fourteen.tscn" id="15_o35k6"]
+[ext_resource type="PackedScene" uid="uid://54pox1hkg5wh" path="res://Core/Game/Buttons/button_fifteen.tscn" id="16_7ia4m"]
+[ext_resource type="PackedScene" uid="uid://bdls354shrmrq" path="res://Core/Game/Buttons/button_sixteen.tscn" id="17_x1xp3"]
+[ext_resource type="PackedScene" uid="uid://d2n2ubncvovod" path="res://Core/Game/Buttons/button_seventeen.tscn" id="18_miy7f"]
+[ext_resource type="PackedScene" uid="uid://hq7kyl3tdfu1" path="res://Core/Game/Buttons/button_eighteen.tscn" id="19_sdbmy"]
+[ext_resource type="PackedScene" uid="uid://chuwlvyronjll" path="res://Core/Game/Buttons/button_nineteen.tscn" id="20_rn4bq"]
+[ext_resource type="PackedScene" uid="uid://ckladwrrp14wu" path="res://Core/Game/Buttons/button_twenty.tscn" id="21_ln72e"]
+[ext_resource type="PackedScene" uid="uid://dm4opb135xora" path="res://Core/Game/Buttons/button_twentyone.tscn" id="22_ahcen"]
+[ext_resource type="PackedScene" uid="uid://buy787od3cnqg" path="res://Core/Game/Buttons/button_twentytwo.tscn" id="23_qvmpp"]
+[ext_resource type="PackedScene" uid="uid://7ucov6h4qkoi" path="res://Core/Game/Buttons/button_twentythree.tscn" id="24_fyuiv"]
+[ext_resource type="PackedScene" uid="uid://b2cggui6cpsv2" path="res://Core/Game/Buttons/button_twentyfour.tscn" id="25_jqadl"]
+[ext_resource type="PackedScene" uid="uid://dy58t11y2exjp" path="res://Core/Game/Buttons/button_twentyfive.tscn" id="26_0qcaj"]
+
+[node name="Game Screen" type="Node2D"]
+script = ExtResource("1_m7u3b")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Background" type="ColorRect" parent="UI"]
+offset_right = 1287.0
+offset_bottom = 724.0
+mouse_filter = 2
+color = Color(0.529412, 1, 1, 1)
+
+[node name="Border" type="ColorRect" parent="UI"]
+offset_right = 1285.0
+offset_bottom = 23.0
+color = Color(0, 0, 0, 1)
+
+[node name="Border2" type="ColorRect" parent="UI"]
+offset_top = 697.0
+offset_right = 1285.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Border3" type="ColorRect" parent="UI"]
+offset_top = 699.0
+offset_right = 678.0
+offset_bottom = 722.0
+rotation = -1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="Border4" type="ColorRect" parent="UI"]
+offset_left = 1259.0
+offset_top = 699.0
+offset_right = 1937.0
+offset_bottom = 722.0
+rotation = -1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="Board" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(410.944, 357)
+scale = Vector2(0.88902, 0.905556)
+texture = ExtResource("2_0ywrh")
+
+[node name="Button_manager" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Button" parent="Button_manager" instance=ExtResource("1_op75x")]
+
+[node name="Button2" parent="Button_manager" instance=ExtResource("3_fof7u")]
+
+[node name="Button3" parent="Button_manager" instance=ExtResource("4_egnkj")]
+
+[node name="Button4" parent="Button_manager" instance=ExtResource("5_0ywrh")]
+
+[node name="Button5" parent="Button_manager" instance=ExtResource("6_ax7wh")]
+
+[node name="Button6" parent="Button_manager" instance=ExtResource("7_dhgsu")]
+
+[node name="Button7" parent="Button_manager" instance=ExtResource("8_qh5uf")]
+
+[node name="Button8" parent="Button_manager" instance=ExtResource("9_7ctwn")]
+
+[node name="Button9" parent="Button_manager" instance=ExtResource("10_ecgqp")]
+
+[node name="Button10" parent="Button_manager" instance=ExtResource("11_pjjb3")]
+
+[node name="Button11" parent="Button_manager" instance=ExtResource("12_432h0")]
+
+[node name="Button12" parent="Button_manager" instance=ExtResource("13_dja32")]
+
+[node name="Button13" parent="Button_manager" instance=ExtResource("14_4raht")]
+
+[node name="Button14" parent="Button_manager" instance=ExtResource("15_o35k6")]
+
+[node name="Button15" parent="Button_manager" instance=ExtResource("16_7ia4m")]
+
+[node name="Button16" parent="Button_manager" instance=ExtResource("17_x1xp3")]
+
+[node name="Button17" parent="Button_manager" instance=ExtResource("18_miy7f")]
+
+[node name="Button18" parent="Button_manager" instance=ExtResource("19_sdbmy")]
+
+[node name="Button19" parent="Button_manager" instance=ExtResource("20_rn4bq")]
+
+[node name="Button20" parent="Button_manager" instance=ExtResource("21_ln72e")]
+
+[node name="Button21" parent="Button_manager" instance=ExtResource("22_ahcen")]
+
+[node name="Button22" parent="Button_manager" instance=ExtResource("23_qvmpp")]
+
+[node name="Button23" parent="Button_manager" instance=ExtResource("24_fyuiv")]
+
+[node name="Button24" parent="Button_manager" instance=ExtResource("25_jqadl")]
+
+[node name="Button25" parent="Button_manager" instance=ExtResource("26_0qcaj")]
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = 904.0
+offset_top = 387.0
+offset_right = 1151.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "00"
+horizontal_alignment = 1

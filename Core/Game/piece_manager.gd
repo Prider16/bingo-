@@ -39,6 +39,8 @@ func finish_drag():
 		draging_piece.position = piece_slot_found.position
 		draging_piece.get_node("Area2D/CollisionShape2D").disabled = true
 		piece_slot_found.piece_in_slot = true
+		piece_slot_found.Border_occupied()
+		Load.set_piece_position(draging_piece.piece_number,piece_slot_found.position)
 	draging_piece = null
 
 

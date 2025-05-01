@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg7smwf25miy1"]
+[gd_scene load_steps=3 format=3 uid="uid://cg7smwf25miy1"]
 
 [ext_resource type="PackedScene" uid="uid://xrcfsjc8e2lv" path="res://Core/Game/piece_base.tscn" id="1_gq5vy"]
+[ext_resource type="Script" uid="uid://b5rm8iflh76pe" path="res://Core/Game/Pieces/Pieces Scripts/forteen.gd" id="2_dlhxu"]
 
 [node name="Piece" instance=ExtResource("1_gq5vy")]
+script = ExtResource("2_dlhxu")
 
 [node name="Label" type="Label" parent="." index="2"]
 anchors_preset = 8

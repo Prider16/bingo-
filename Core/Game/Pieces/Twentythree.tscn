@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://des1bgkw65yvq"]
+[gd_scene load_steps=3 format=3 uid="uid://des1bgkw65yvq"]
 
 [ext_resource type="PackedScene" uid="uid://xrcfsjc8e2lv" path="res://Core/Game/piece_base.tscn" id="1_o6kno"]
+[ext_resource type="Script" uid="uid://rypndx2gs5ul" path="res://Core/Game/Pieces/Pieces Scripts/twentythree.gd" id="2_xs62h"]
 
 [node name="Piece" instance=ExtResource("1_o6kno")]
+script = ExtResource("2_xs62h")
 
 [node name="Label" type="Label" parent="." index="2"]
 anchors_preset = 8

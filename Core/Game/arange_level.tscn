@@ -1,7 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://giolbxdg7imw"]
+[gd_scene load_steps=31 format=3 uid="uid://giolbxdg7imw"]
 
 [ext_resource type="Texture2D" uid="uid://b8kiw4x4s6njf" path="res://Assets/Board.png" id="1_ih1i7"]
+[ext_resource type="Script" uid="uid://bqrp7ua3w8eoj" path="res://Core/Game/arange_level.gd" id="1_xt8k7"]
 [ext_resource type="Script" uid="uid://c880j08fn0kgn" path="res://Core/Game/piece_manager.gd" id="2_metqo"]
+[ext_resource type="Script" uid="uid://d308cxynu5nb6" path="res://Core/Game/borders_mahager.gd" id="2_v14yc"]
 [ext_resource type="PackedScene" uid="uid://b3y3ioiwkmcss" path="res://Core/Game/piece_border_base.tscn" id="2_xc4l4"]
 [ext_resource type="PackedScene" uid="uid://ci064rw2kattt" path="res://Core/Game/Pieces/One.tscn" id="4_xc4l4"]
 [ext_resource type="PackedScene" uid="uid://kmakxqei32s3" path="res://Core/Game/Pieces/Two.tscn" id="5_3lyiu"]
@@ -30,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://c4fjcou85b520" path="res://Core/Game/Pieces/Twentyfive.tscn" id="28_4vctw"]
 
 [node name="Arange Level" type="Node2D"]
+script = ExtResource("1_xt8k7")
 
 [node name="UI" type="Node" parent="."]
 
@@ -72,6 +75,8 @@ scale = Vector2(0.88902, 0.905556)
 texture = ExtResource("1_ih1i7")
 
 [node name="Borders" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_v14yc")
 
 [node name="Piece Border" parent="Borders" instance=ExtResource("2_xc4l4")]
 z_index = 2
@@ -251,3 +256,53 @@ position = Vector2(1107, 459)
 
 [node name="Piece25" parent="Piece manager" instance=ExtResource("28_4vctw")]
 position = Vector2(1193, 460)
+
+[node name="Start" type="Button" parent="."]
+z_index = 3
+offset_left = 1049.0
+offset_top = 611.0
+offset_right = 1195.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Ready" type="Button" parent="."]
+z_index = 3
+offset_left = 825.0
+offset_top = 611.0
+offset_right = 971.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 32
+text = "Ready"
+
+[node name="Ready_signals" type="Node" parent="."]
+
+[node name="P1" type="ColorRect" parent="Ready_signals"]
+offset_left = 808.0
+offset_top = 538.0
+offset_right = 841.0
+offset_bottom = 571.0
+color = Color(0.986675, 0, 0.251064, 1)
+
+[node name="P2" type="ColorRect" parent="Ready_signals"]
+offset_left = 931.0
+offset_top = 538.0
+offset_right = 964.0
+offset_bottom = 571.0
+color = Color(0.988235, 0, 0.25098, 1)
+
+[node name="P3" type="ColorRect" parent="Ready_signals"]
+offset_left = 1049.0
+offset_top = 538.0
+offset_right = 1082.0
+offset_bottom = 571.0
+color = Color(0.988235, 0, 0.25098, 1)
+
+[node name="P4" type="ColorRect" parent="Ready_signals"]
+offset_left = 1170.0
+offset_top = 538.0
+offset_right = 1203.0
+offset_bottom = 571.0
+color = Color(0.988235, 0, 0.25098, 1)
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

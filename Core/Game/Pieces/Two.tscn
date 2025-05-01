@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://kmakxqei32s3"]
+[gd_scene load_steps=3 format=3 uid="uid://kmakxqei32s3"]
 
 [ext_resource type="PackedScene" uid="uid://xrcfsjc8e2lv" path="res://Core/Game/piece_base.tscn" id="1_7mlsk"]
+[ext_resource type="Script" uid="uid://c1cn6pavfd215" path="res://Core/Game/Pieces/Pieces Scripts/two.gd" id="2_ges45"]
 
 [node name="Piece" instance=ExtResource("1_7mlsk")]
+script = ExtResource("2_ges45")
 
 [node name="Label" type="Label" parent="." index="2"]
 offset_left = -9.0
