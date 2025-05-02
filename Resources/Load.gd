@@ -2,6 +2,7 @@ extends Node
 
 var piece_Position: Dictionary = {}
 var button_position: Array = []
+var number = 0
 
 func set_piece_position(piece_position, slot_position):
 	piece_Position[piece_position] = slot_position

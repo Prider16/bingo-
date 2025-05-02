@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://jhrcgsqerf0u"]
+[gd_scene load_steps=4 format=3 uid="uid://jhrcgsqerf0u"]
 
 [ext_resource type="Script" uid="uid://cxsf2besjpru4" path="res://Core/Game/Buttons/button scripts/button_one.gd" id="1_k2i4j"]
 [ext_resource type="Texture2D" uid="uid://8fytaarfddwj" path="res://Assets/Pieces.png" id="1_p825k"]
+[ext_resource type="Texture2D" uid="uid://2l7y6hruk1sv" path="res://Assets/PiecescrossX.png" id="3_1hxeb"]
 
 [node name="Button" type="Node2D"]
 script = ExtResource("1_k2i4j")
@@ -19,6 +20,7 @@ offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("1_p825k")
+texture_disabled = ExtResource("3_1hxeb")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]

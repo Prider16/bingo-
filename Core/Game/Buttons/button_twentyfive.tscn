@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy58t11y2exjp"]
+[gd_scene load_steps=4 format=3 uid="uid://dy58t11y2exjp"]
 
 [ext_resource type="Texture2D" uid="uid://8fytaarfddwj" path="res://Assets/Pieces.png" id="1_g5eyy"]
 [ext_resource type="Script" uid="uid://ndwmvjor7mrp" path="res://Core/Game/Buttons/button scripts/button_twentyfive.gd" id="1_ypan6"]
+[ext_resource type="Texture2D" uid="uid://2l7y6hruk1sv" path="res://Assets/PiecescrossX.png" id="3_qmb1u"]
 
 [node name="Button" type="Node2D"]
 script = ExtResource("1_ypan6")
@@ -19,6 +20,7 @@ offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("1_g5eyy")
+texture_disabled = ExtResource("3_qmb1u")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
@@ -36,3 +38,5 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "25"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
