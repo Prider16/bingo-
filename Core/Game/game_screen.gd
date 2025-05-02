@@ -26,40 +26,44 @@ extends Node2D
 @onready var button_24: Node2D = $Button_manager/Button24
 @onready var button_25: Node2D = $Button_manager/Button25
 
-
-
-func button_possitions(button):
-	button.position = Load.piece_Position[str(button.number)]
+@onready var horizontal_1: ColorRect = $"Lines/Horizontal 1"
+@onready var horizontal_2: ColorRect = $"Lines/Horizontal 2"
+@onready var horizontal_3: ColorRect = $"Lines/Horizontal 3"
+@onready var horizontal_4: ColorRect = $"Lines/Horizontal 4"
+@onready var horizontal_5: ColorRect = $"Lines/Horizontal 5"
 
 
 func _ready() -> void:
 	button_possitions(button)
 	button_possitions(button_2)
 	button_possitions(button_3)
-	button_possitions(button_4)
-	button_possitions(button_5)
-	button_possitions(button_6)
-	button_possitions(button_7)
-	button_possitions(button_8)
-	button_possitions(button_9)
-	button_possitions(button_10)
-	button_possitions(button_11)
-	button_possitions(button_12)
-	button_possitions(button_13)
-	button_possitions(button_14)
-	button_possitions(button_15)
-	button_possitions(button_16)
-	button_possitions(button_17)
-	button_possitions(button_18)
-	button_possitions(button_19)
-	button_possitions(button_20)
-	button_possitions(button_21)
-	button_possitions(button_22)
-	button_possitions(button_23)
-	button_possitions(button_24)
-	button_possitions(button_25)
+	#button_possitions(button_4)
+	#button_possitions(button_5)
+	#button_possitions(button_6)
+	#button_possitions(button_7)
+	#button_possitions(button_8)
+	#button_possitions(button_9)
+	#button_possitions(button_10)
+	#button_possitions(button_11)
+	#button_possitions(button_12)
+	#button_possitions(button_13)
+	#button_possitions(button_14)
+	#button_possitions(button_15)
+	#button_possitions(button_16)
+	#button_possitions(button_17)
+	#button_possitions(button_18)
+	#button_possitions(button_19)
+	#button_possitions(button_20)
+	#button_possitions(button_21)
+	#button_possitions(button_22)
+	#button_possitions(button_23)
+	#button_possitions(button_24)
+	#button_possitions(button_25)
+
+func button_possitions(button):
+	button.position = Load.piece_Position[str(button.number)]
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if button.get_x_checks() == 5:
+		horizontal_1.visible = true

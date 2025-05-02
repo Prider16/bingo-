@@ -134,3 +134,46 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "00"
 horizontal_alignment = 1
+
+[node name="Lines" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Horizontal 1" type="ColorRect" parent="Lines"]
+visible = false
+offset_left = 660.0
+offset_top = 71.0
+offset_right = 708.0
+offset_bottom = 116.0
+color = Color(0.92383, 0.25123, 0.279324, 1)
+
+[node name="Horizontal 2" type="ColorRect" parent="Lines"]
+visible = false
+offset_left = 660.0
+offset_top = 187.0
+offset_right = 708.0
+offset_bottom = 232.0
+color = Color(0.92383, 0.25123, 0.279324, 1)
+
+[node name="Horizontal 3" type="ColorRect" parent="Lines"]
+visible = false
+offset_left = 660.0
+offset_top = 303.0
+offset_right = 708.0
+offset_bottom = 348.0
+color = Color(0.92383, 0.25123, 0.279324, 1)
+
+[node name="Horizontal 4" type="ColorRect" parent="Lines"]
+visible = false
+offset_left = 668.0
+offset_top = 421.0
+offset_right = 716.0
+offset_bottom = 466.0
+color = Color(0.92383, 0.25123, 0.279324, 1)
+
+[node name="Horizontal 5" type="ColorRect" parent="Lines"]
+visible = false
+offset_left = 665.0
+offset_top = 535.0
+offset_right = 713.0
+offset_bottom = 580.0
+color = Color(0.92383, 0.25123, 0.279324, 1)
